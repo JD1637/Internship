@@ -1,0 +1,292 @@
+<html>
+
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./Main_5.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .cqa{
+        margin-top: -40px;
+    }
+    .content{
+        min-height: 510px;
+    }
+    table{
+        height: 420px;
+    }
+    .mgless1{
+        margin-top: -15px;
+    }
+    .mgless2{
+        margin-top: -40px;
+    }
+</style>
+
+<body>
+    <header>
+        <!-- logo -->
+        <div class="img">
+            <img src="data:image/png;base64,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"
+                alt="logo">
+        </div>
+    </header>
+    <!-- search -->
+    <section class="head">
+        <div class="searchbar">
+            <h1>Need Help?</h1>
+            <form action="">
+                <i class="fa fa-search"></i>
+                <input type="button" name="sbutton" id="sbutton">
+                <input type="search" name="search" id="search" placeholder="search">
+            </form>
+        </div>
+    </section>
+    <p class="contentHeading">Dashboard FAQs</p>
+    <section class="main">
+        <div class="category">
+            <table>
+                <tr>
+                    <th>Category</th>
+                </tr>
+                <tr>
+                    <td><button onclick="cd1()">Create Dashboard</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="cd2()">Switch User</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="cd3()">Searching in Asite</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="cd4()">My Account</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="content">
+            <div class="cqa mgless1" id="cd1">
+                <ul class="accordion">
+                    <li>
+                        <label for="Q1.1">
+                            Q1. What happens if I give 'Admin' permission on my dashboard to another user?
+
+                        </label>
+                        <input type="radio" name="accordion" id="Q1.1">
+                        <div class="content2">
+                            <p>
+                                A1. This means that the other user will have full access to manage the dashboard you are creating,
+                                including the ability to share it with other users.
+                                
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="Q1.2">
+                            Q2. How can I share a dashboard with a distribution group?
+
+                        </label>
+                        <input type="radio" name="accordion" id="Q1.2">
+                        <div class="content2">
+                            <p>
+                                A2. You need to create a distribution group by selecting 'Dashboards' as group type. 
+
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+            <div class="cqa" id="cd2">
+                <ul class="accordion">
+                    <li>
+                        <label for="Q2.1">
+                            Q1. Why can't I access admin functionalities on a project when switching to a proxy user?
+
+                        </label>
+                        <input type="radio" name="accordion" id="Q2.1">
+                        <div class="content2">
+                            <p>
+                                A1. Due to security reasons and to prevent misuse of the platform, admin functionalities will remain
+                                inaccessible when switching to a proxy user. Accordingly, certain tabs like 'Projects', 'aMessages',
+                                'Tasks', 'Admin', 'Reports' will also remain inaccessible when switching to a proxy user.
+                                
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="Q2.2">
+
+                            Q2. I’ve proxied on behalf of a user but when I go to Switch Users, their name isn’t showing?
+                        </label>
+                        <input type="radio" name="accordion" id="Q2.2">
+                        <div class="content2">
+                            <p>
+                                A2. You need to check that required project is selected in the project filter where proxy access was
+                                assigned. If it still doesn't appear, check whether you are trying to get access outside of the
+                                start and end date defined while assigning proxy access.
+
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="Q2.3">
+                            Q3. User A is assigned proxy to User B on Project 1. User B is assigned proxy to User C on Project
+                            2. Can User A view Project 2?
+
+                        </label>
+                        <input type="radio" name="accordion" id="Q2.3">
+                        <div class="content2">
+                            <p>
+                                A3. User A will be able to view Project 2 only if he/she is specifically given user access on
+                                Project 2, irrespective of whether User B is assigned proxy to User C or not.
+
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="Q2.4">
+                            Q4. Why is my dashboard changed?
+
+                        </label>
+                        <input type="radio" name="accordion" id="Q2.4">
+                        <div class="content2">
+                            <p>
+                                A4. Your dashboard may change indirectly, due to changes in dashboard made using proxy user access.
+
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cqa mgless2" id="cd3">
+                <ul class="accordion">
+                    <li>
+                        <label for="Q3.1">
+                            Q1. Why is my existing file not listed in the search results?
+
+                        </label>
+                        <input type="radio" name="accordion" id="Q3.1">
+                        <div class="content2">
+                            <p>
+                                A1. The search results will, by default, show a maximum of 5 file records at a time. Click on the
+                                'More' link available at bottom of the results list to view more results if any. Also check whether
+                                the project selected in project filter is correct.
+                                
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cqa" id="cd4">
+                <ul class="accordion">
+                    <li>
+                        <label for="Q4.1">
+                            Q1. Which special characters can I use while resetting a password?
+
+                        </label>
+                        <input type="radio" name="accordion" id="Q4.1">
+                        <div class="content2">
+                            <p>
+                                A1. Following are the special characters you can use while resetting a password:
+                
+                                ( _ , ! @ # $ % ^ & * - , = |
+                                
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="Q4.2">
+                            Q2. Why can't I edit the email address in my Asite account?
+
+                        </label>
+                        <input type="radio" name="accordion" id="Q4.2">
+                        <div class="content2">
+                            <p>
+                                A2. We don't allow changing the email address of your Asite account, as it serves as a unique
+                                reference for us to identify you as a user. However, if you still need to change make such a change,
+                                send us an email and we will get back soon with available options.
+
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="Q4.3">
+                            Q3. How do I switch from 'Adoddle View' to 'Classic View' and vice versa?
+
+                        </label>
+                        <input type="radio" name="accordion" id="Q4.3">
+                        <div class="content2">
+                            <p>
+                                A3. Once logged in on Adoddle View, click on your profile picture at top right and select 'Classic
+                                View' to switch to Classic View.
+                                To switch back to Adoddle View, go to 'My Home' i.e. the default landing page in Classic View. In
+                                the 'Settings' menu at the top, select 'Adoddle View' to switch back to Adoddle View.
+
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="comment">
+        <div class="area" id="area">
+            <textarea placeholder="comment"></textarea>
+        </div>
+        <div class="send">
+            <button id="commentButton" onclick="send()">
+                <i class="material-icons">&#xe163;</i>
+            </button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo">
+            <img src="https://9176383.fs1.hubspotusercontent-na1.net/hubfs/9176383/logo-asite-footer.png" alt="logo">
+        </div>
+        <div class="icons">
+            <a href="https://www.instagram.com/asitesolutions/"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.facebook.com/asitesolutions/"><i class="fa fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/asite?original_referer=https%3A%2F%2Fwww.asite.com%2F"><i class="fa fa-linkedin-square"></i></a>
+            <a href="https://twitter.com/ASITE"><i class="fa fa-twitter"></i></a>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        document.getElementById("cd1").style.display = "";
+        document.getElementById("cd2").style.display = "none";
+        document.getElementById("cd3").style.display = "none";
+        document.getElementById("cd4").style.display = "none";
+        function cd1() {
+            document.getElementById("cd1").style.display = "";
+            document.getElementById("cd2").style.display = "none";
+            document.getElementById("cd3").style.display = "none";
+            document.getElementById("cd4").style.display = "none";
+        }
+        function cd2() {
+            document.getElementById("cd1").style.display = "none";
+            document.getElementById("cd2").style.display = "";
+            document.getElementById("cd3").style.display = "none";
+            document.getElementById("cd4").style.display = "none";
+        }
+        function cd3() {
+            document.getElementById("cd1").style.display = "none";
+            document.getElementById("cd2").style.display = "none";
+            document.getElementById("cd3").style.display = "";
+            document.getElementById("cd4").style.display = "none";
+        }
+        function cd4() {
+            document.getElementById("cd1").style.display = "none";
+            document.getElementById("cd2").style.display = "none";
+            document.getElementById("cd3").style.display = "none";
+            document.getElementById("cd4").style.display = "";
+        }
+        let btnSend = document.querySelector('#commentButton');
+        function send() {
+            btnSend.style.display = "none";
+            area.innerHTML = "<h1>Thanks for Reply</h1>"
+        }
+    </script>
+</body>
+
+</html>

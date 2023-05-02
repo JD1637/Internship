@@ -1,0 +1,9 @@
+<!-- <p>fruits works!</p> -->
+<div class="div">
+    <div *ngFor="let fruit of fruiteList" class="div1" [ngClass]="fruit.type">
+        <p>{{fruit.id}}</p>
+        <p>{{fruit.name}}</p>
+        <div [innerHTML]="value[fruit.id-1]  | fruitPipe"></div>
+        <p [appFruitDirective]="color[fruit.id - 1]">{{fruit.type}}</p>
+    </div>
+</div>

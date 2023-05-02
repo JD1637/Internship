@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>Optimize-2</title>
+</head>
+
+<body>
+    <button id="one">Button 1</button>
+    <button id="two">Button 2</button>
+</body>
+<script>
+    // after deleting the button still event is running which is wrong
+    //Leaking DOM 
+
+    //que
+    var one = document.querySelector("#one");
+    var two = document.querySelector("#two");
+    function callBackExample() {
+        one.removeEventListener("", callBackExample);
+    }
+    one.addEventListener('hover', function () {
+        two.remove();
+        console.log(two); // will print the html even after deletion
+    });
+    two.addEventListener('hover', function () {
+        one.remove();
+        console.log(one); // will print the html even after deletion
+    });
+
+    
+    //ans
+    function callBackExample() {
+        one.removeEventListener("", callBackExample);
+    }
+    function callBackExample() {
+        two.removeEventListener("", callBackExample);
+    }
+    one.addEventListener('mouseover', function () {
+        var two = document.querySelector("#two");
+        two.remove();
+        console.log(two);
+        callBackExample();
+    });
+    two.addEventListener('mouseover', function () {
+        var one = document.querySelector("#one");
+        one.remove();
+        console.log(one);
+        callBackExample();
+    });
+</script>
+
+</html>

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+}
+body{
+    overflow: hidden;
+}
+hr{
+    width:80%;
+    margin:auto;
+    margin-top: 50px;
+}
+h1{
+    padding-bottom : 30px;
+    font-size: 40px;
+}
+i{
+    padding: 7px;
+}
+h3{
+    padding: 12px;
+    text-align: center;
+    font-size: 30px;
+    color: #263440;
+    text-decoration: underline;
+}
+dl{
+    padding-left: 80px;
+}
+dd{
+    padding-left: 50px;
+}
+section{
+    background-color: rgb(198, 211, 220);
+    height:100%;
+}
+.main{
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+.Personal_Info{
+    text-align: center;
+    padding:40px 0;
+    color: white;
+    background-color: #263440;
+    display: flex;
+    justify-content: space-evenly;
+}
+.info{
+    padding: 40px;
+}
+img{
+    width: 200px;
+    height:200px;
+}
+.img>img{
+    border-radius: 20%;
+    width: 330px;
+    height: 300px;
+    display: inline;
+    /* justify-content: space-around; */
+    padding-left: 30px;
+}
+.Education{
+    width:400px;
+    display: flex;
+    float: right;
+    flex-direction: column;
+
+}
+.Profile{
+    display:flex;
+    width: 50%;
+    flex-direction: column;
+    text-indent: 50px;
+    text-align: justify;
+    margin-left: 60px;
+    float: inherit;
+    /* padding-left:40px;
+    padding-right:40px; */
+}
+.skills {
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+.Knowledge{
+    display:flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.main-2{
+    display: flex;
+    justify-content: space-around;
+    margin: 70px 0px;
+}
+.hobbies{
+    display: flex;
+    flex-direction: column;
+    margin-right:166px;
+}

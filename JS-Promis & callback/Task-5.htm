@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Task-5</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let Promise1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('pro1'); console.log("Class has been cancelled");
+        }, 1000);
+    });
+    let Promise2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('pro2'); console.log("Next class is scheduled on monday");
+        }, 2000);
+    });
+    let Promise3 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('pro3'); console.log("Go to hospital for sickness checkup");
+        }, 3000);
+    });
+    // Promise.all([Promise1, Promise2, Promise3]).then(console.log).catch(console.log);
+</script>
+</html>

@@ -1,0 +1,55 @@
+<!-- <p>create-product works!</p> -->
+<div>
+    <table>
+        <tr>
+            <td><label>Product Name: </label></td>
+            <td><input type="text" #name></td>
+        </tr>
+        <tr>
+            <td><label>Product Price: </label></td>
+            <td><input type="number" #price></td>
+        </tr>
+        <tr>
+            <td><label>Product Type: </label></td>
+            <td><input type="text" #type></td>
+        </tr>
+        <tr>
+            <td><label>Product Owner: </label></td>
+            <td><input type="text" #owner></td>
+        </tr>
+        <tr>
+            <td><label>Contact Number: </label></td>
+            <td><input type="number" #number></td>
+        </tr>
+        <tr>
+            <td><label>Contact Email: </label></td>
+            <td><input type="email" #email></td>
+        </tr>
+    </table>
+    <!-- <button (click) = "getList()">Enter</button> -->
+    <button (click) = "add()">Add</button>
+</div>
+
+
+<div class="display">
+    <div *ngFor='let d of listReceived ; let i = index' class="content">
+        <tr>
+        <td><label>Name : </label></td>
+        <td><app-product-list [data]="d.name"></app-product-list></td>
+        </tr>
+        <label>Type : </label>
+        <app-product-list [data]="d.type" [appType]="d.type"></app-product-list>
+        <label>Price : </label>
+        <app-product-list [data]="d.price | pureExpontial"></app-product-list>
+        <label>Owner : </label>
+        <app-product-list [data]="d.owner"></app-product-list>
+        <label>Conact No. : </label>
+        <app-product-list [data]="d.number"></app-product-list>
+        <label>Contact Email : </label>
+        <app-product-list [data]="d.email"></app-product-list>
+        <button (click)="update(i)">Update</button>
+        <button (click)="remove(i)">Remove</button>
+    </div>
+</div>
+
+<p>{{listReceived[listReceived.length-1] | impureJSON}}</p>

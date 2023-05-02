@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>Curring-2</title>
+</head>
+
+<body>
+    <script>
+        //volume of Trinangular prism
+        function Tricalculate(l) {
+            return function (b) {
+                return function (h) {
+                    return (0.5 * l * b * h);
+                }
+            }
+        }
+        document.write('Volume of Triangular Prism : ' +Tricalculate(2)(3)(4) + '<br />');
+
+        //volume of Rectangle prism
+        function Reactcalculate(l) {
+            return function (b) {
+                return function (h) {
+                    return l * b * h;
+                }
+            }
+        }
+        document.write('Volume of Reactagonal Prism : ' + Reactcalculate(4)(5)(6) + '<br />');
+
+        //volume of Pentagonal prism
+        function Pentacalculate(l) {
+            return function (b) {
+                return function (h) {
+                    return (5 / 2) * l * b * h;
+                }
+            }
+        }
+        document.write('Volume of Pentagonal Prism : ' + Pentacalculate(3)(4)(5) + '<br />');
+
+        //volume of Hexagonal prism
+        function Hexacalculate(l) {
+            return function (b) {
+                return function (h) {
+                    return 3 * l * b * h;
+                }
+            }
+        }
+        document.write('Volume of Hexagonal Prism : ' + Hexacalculate(3)(4)(5) + '<br />');
+
+    </script>
+</body>
+
+</html>

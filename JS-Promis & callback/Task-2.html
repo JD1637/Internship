@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Task-2</title>
+    </head>
+    <body>
+    </body>
+    <script>
+        const person1 = "John";
+        const person2 = "Kenny";
+        const person3 = "Tom";
+        function pq(){
+            return new Promise(function (resolve,reject){
+                setTimeout(() => {
+                    resolve();
+                }, 1000);
+            })
+        }
+        function fq1(){
+            console.log(person1 + " call is on line");
+        }
+        function fq2(){
+            console.log(person2 + " call is on line");
+        }
+        function fq3(){
+            console.log(person3 + " call is on line");
+        }     
+        pq().then(function(){setTimeout(() => {
+            fq1();
+        },1000);}).then(function(){setTimeout(() => {
+            fq2();
+        }, 2000);}).then(function(){setTimeout(() => {
+            fq3();
+        }, 3000);})
+    </script>
+</html>

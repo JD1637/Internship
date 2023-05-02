@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- navbar -->
+  <nav>
+    <h3>Blogs</h3>
+    <ul>
+      <li id="myBtn">Add Blogs</li>
+    </ul>
+  </nav>
+
+  <!-- modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Add Blog</h3>
+      <hr>
+      <form id="blog-form">
+        <label >
+          Name
+          <input type="text" name ="author" placeholder="Your name"  required>
+        </label>  
+        <label >
+          Title
+          <input type="text" name ="title" placeholder="Title"  required>
+        </label>  
+        <label >
+          Content
+          <textarea name="content" placeholder="Content" id="content" cols="30" rows="10" required></textarea>
+        </label>    
+       <input type="submit" value="submit">
+      </form>
+    </div>
+  </div>
+  
+  <!-- dynamic content loading-->
+  <div class="row" id="app"></div>
+
+  <script src="dist/dom.js"></script>
+  <script src="dist/index.js"></script>
+</body>
+
+</html>

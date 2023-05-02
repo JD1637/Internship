@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title>List View</title>
+</head>
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .Main>li {
+        display: inline-block;
+    }
+
+    a {
+        background-color: black;
+        color: white;
+        position: relative;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+    }
+
+    li:hover>a {
+        background-color: rgb(255, 51, 0);
+        cursor: pointer;
+    }
+
+    .submenu, .submenu-1{
+        position: absolute;
+        display: none;
+    }
+    .Main>li:hover .submenu, .submenu>li:hover>.submenu-1{
+        display: block;
+    }
+    .submenu li{
+        position: relative;
+    }
+    .submenu-1{
+        width: 80px;
+        top:0;
+        right:0;
+        transform:translate(100%,0);
+    }
+</style>
+
+<body>
+    <ul>
+        <li>HTML
+            <ul style="list-style-type:circle">
+                <li>HTML-1</li>
+                <li>HTML-2</li>
+                <li>HTML-3</li>
+                <li>HTML-4</li>
+                <li>HTML-5</li>
+            </ul>
+        </li>
+        <li>CSS</li>
+        <li>Javascript</li>
+    </ul>
+    <hr>
+    <hr>
+    <hr>
+    <ul class="Main">
+        <li><a href="#">Main</a>
+            <ul class="submenu">
+                <li><a href="#">HTML</a>
+                    <ul class="submenu-1">
+                        <li><a href="#">HTML 1</a></li>
+                        <li><a href="#">HTML 2</a></li>
+                        <li><a href="#">HTML 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JS</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

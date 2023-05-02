@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <title>Select</title>
+</head>
+<style>
+    a {
+        text-decoration: none;
+        display: block;
+        background-color: black;
+        padding: 6px;
+        color: white;
+        width: 80px;
+        text-align: center;
+        position: relative;
+    }
+
+    .menu>li {
+        display: inline-block;
+    }
+
+    li:hover>a {
+        display: block;
+        background-color: red;
+        cursor: pointer;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0;
+    }
+
+    .submenu, .submenu-1{
+        position: absolute;
+        display: none;
+    }
+
+    .menu>li:hover .submenu, .submenu>li:hover .submenu-1 {
+        display: block;
+    }
+
+    .submenu li {
+        position: relative;
+    }
+    .submenu-1{
+        top: 0;
+        right:0;
+        transform:translate(100%,0);
+    }
+</style>
+
+<body>
+    <label>Maharastra</label>
+    <select>
+        <option>Pune</option>
+        <option>Mumbai</option>
+    </select><br><br>
+    <label>Pune</label>
+    <select>
+        <option>Dighi</option>
+        <option>Moshi</option>
+        <option>Shivajinagar</option>
+    </select><br><br>
+    <label>Mumbai</label>
+    <select>
+        <option>Santakruiz</option>
+        <option>Vikroli</option>
+        <option>Mumbra</option>
+    </select>
+    <hr>
+    <hr>
+    <hr>
+    <ul class="menu">
+        <li><a href="#">Maharastra</a>
+            <ul class="submenu">
+                <li><a href="#">Pune</a>
+                    <ul class="submenu-1">
+                        <li><a href="#">Dighi</a></li>
+                        <li><a href="#">Moshi</a></li>
+                        <li><a href="#">Shivajinagar</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Mumbai</a>
+                <ul class="submenu-1">
+                    <li><a href="#">Santakruiz</a></li>
+                    <li><a href="#">Vikroli</a></li>
+                    <li><a href="#">Mumbra</a></li>
+                </ul></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

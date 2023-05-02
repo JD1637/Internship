@@ -1,0 +1,24 @@
+<!-- <p>employee-list works!</p> -->
+<h1>{{title}}</h1>
+
+<table>
+    <button (click)="rank()" [disabled]="status">ByRank</button>
+    <tr>
+        <th>Employee Id</th>
+        <th>Employee Name</th>
+        <th>Employee Contact</th>
+        <th>Employee Type</th>
+        <th [hidden]="hide">Employee Rank</th>
+        <th>Edit</th>
+    </tr>
+    <tr *ngFor="let employee of Asite" [ngClass]="employee.type">
+        <td>{{employee.id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.contact}}</td>
+        <td [appEmployeeDirective] = "color">{{employee.type}}</td>
+        <td [hidden]="hide">{{employee.rank}}</td>
+        <td><button (click)="contactChange(employee.id)">Edit Contact</button></td>
+    </tr>
+</table>
+
+

@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>Curring-3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <input type="number" id="id"/>
+    <input type="text" id="name">
+    <button id="filter">Filter</button>
+    <table id="myTable"></table>
+</body>
+<script>
+    const filter = document.getElementById("filter");
+    var myTable = document.getElementById("myTable");
+
+    var productData = [
+        { id: 1, name: "ProductA" },
+        { id: 2, name: "ProductB" },
+        { id: 3, name: "ProductC" },
+        { id: 4, name: "ProductD" },
+    ];
+
+    //To display data & update data in table
+    function displayData() {
+        var data = `<tr><th>Product ID</th><th>Product Name</th></tr>`;
+        productData.map((val) => {
+            data += `<tr id='${val.id}'><td>${val.id}</td><td>${val.name}</td></tr>`;
+        });
+        myTable.innerHTML = data;
+    }
+    //On clicking filter button
+    filter.addEventListener("click", (e) => {
+        e.preventDefault();
+        const id = parseInt(document.getElementById("id").value);
+        const name = document.getElementById("name").value;
+        productData = filterProducts(productData)(id)(name);
+        displayData();
+    });
+
+    //currying function
+    function filterProducts(productData) {
+        return function (id) {
+            return function (name) {
+                return productData.filter((val) => {
+                    return val.id === id && val.name === name;
+                });
+            };
+        };
+    }
+
+    displayData();
+</script>
+
+</html>
